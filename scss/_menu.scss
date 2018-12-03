@@ -86,9 +86,9 @@
     }
 
     .portrait {
-      width: 180px;
-      height: 270px;
-      background: $portrait-image;
+      width: 128px;
+      height: 192px;
+      background: $portrait-imageLrg;
       border-radius: 50%; //makes it a circle
       border: solid 3px $secondary-color; //provides a yellow border
     }
