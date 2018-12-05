@@ -1,34 +1,35 @@
-//Menu Button
+//The Menu Button in the top right
 .menu-btn {
   position: absolute;
-  z-index: 3;
-  right: 35px;
-  top: 35px;
+  z-index: 3; //ensure its at the front
+  right: 35px; //35px from the right
+  top: 35px; //35px from the top
   cursor: pointer;
   @include easeOut;
 
   .btn-line {
+    //properties of the 3 lines used to make the menu button
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: set-text-color($primary-color);
+    background: set-text-color($primary-color); //coloured to match the theme
     @include easeOut;
   }
 
-  // Rotate Into X With Menu Lines
+  // Rotate menu button in to an x upon opening
   &.close {
-    transform: rotate(180deg);
+    transform: rotate(180deg); //make lines vertical
 
     .btn-line {
-      // Line 1 - rotate
+      // Line 1 - rotate an additional 45 degrees
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
-      // Line 2 - Hide
+      // Line 2 - becomes invisible
       &:nth-child(2) {
         opacity: 0;
       }
-      // Line 3 - rotate
+      // Line 3 - rotate 45 degrees back the other way
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
       }
@@ -98,14 +99,13 @@
     transform: translate3d(600px, 0, 0);
     @include easeOut;
 
-    
     &.show {
       //slide in from right
-    transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
 
     &.current > a {
-color: $secondary-color;
+      color: $secondary-color;
     }
   }
 }
@@ -130,5 +130,10 @@ color: $secondary-color;
     &:hover {
       color: $secondary-color;
     }
+  }
+
+  .menu-icons {
+    color: set-text-color($primary-color);
+    @include easeOut;
   }
 }

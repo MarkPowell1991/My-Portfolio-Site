@@ -2,7 +2,8 @@
 @import "menu";
 
 * {
-  box-sizing: border-box;
+  //applies to everything in scss
+  box-sizing: border-box; //prevents padding from effectin objects height and width
 }
 
 body {
@@ -12,10 +13,11 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
+
+  line-height: 1.2;
 }
 
-//headings
+//my name, description & the icon links
 h1,
 h2,
 h3 {
@@ -29,43 +31,48 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
+    //gives the sm-heading a background which is slightly lighter than the normal background
   }
 }
 
 a {
+  //the link icons
   color: #fff;
   text-decoration: none;
 }
 
 header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
+  //the top row
+  position: fixed; //stays at top even when scroll
+  z-index: 2; //1 position behind the menu button
+  width: 100%; //the full width of the screen
 }
 
 .text-secondary {
-  color: $secondary-color;
+  //my surname
+  color: $secondary-color; //the 2nd them colour
 }
 
 main {
+  //everything on the home page excluding the header and the menu overlay
   padding: 4rem;
- // height: 100%;
- min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px); //the whole page - the size of the footer
   .icons {
+    //all icons within the main
     margin-top: 1rem;
-    a {
+    a { 
       padding: 0.4rem;
 
-      &:hover {
+      &:hover { //on hover
         color: $secondary-color;
-        @include easeOut();
+        @include easeOut(); //makes the color fade in
       }
     }
   }
-  &#home {
-    overflow: hidden;
+  &#home { //everything with main on the homepage only
+    overflow: hidden; //no scrollbar
     h1 {
-      margin-top: 20vh;
+      margin-top: 20vh; //moves my name down 20/100 portions of the screen
     }
   }
 }
@@ -73,10 +80,10 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 
-  'bioimage bio bio'
-  'job1 job2 job3';
-  grid-template-columns: repeat(3,1fr);
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
     grid-area: bioimage;
@@ -84,30 +91,29 @@ main {
     border-radius: 50%;
     border: $secondary-color 3px solid;
   }
-  
+
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
   }
-  
-  .job-1{
-    grid-area: job1
+
+  .job-1 {
+    grid-area: job1;
   }
-  
-  .job-2{
-    grid-area: job2
+
+  .job-2 {
+    grid-area: job2;
   }
-  
-  .job-3{
-    grid-area: job3
+
+  .job-3 {
+    grid-area: job3;
   }
-  
+
   .job {
-    background: lighten($primary-color,  5);
+    background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
-
 }
 
 //projects
@@ -134,7 +140,7 @@ main {
   align-items: center;
   margin-top: 1rem;
 
-  div{
+  div {
     font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
@@ -152,7 +158,7 @@ main {
   }
 }
 
-//button Styles 
+//button Styles
 
 .btn {
   display: block;
@@ -162,16 +168,13 @@ main {
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
-
   }
 }
-
 
 .btn-dark {
 @extend .btn;
 background: darken($primary-color, 50);
 color: #fff;
-
 }
 
 .btn-light {
@@ -180,7 +183,7 @@ color: #fff;
   color: #333;
 }
 
-#main-footer{
+#main-footer {
   text-align: center;
   padding: 1rem;
   background: darken($primary-color, 10);

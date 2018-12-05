@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Welcome to my portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/main.css" />
-  <title>Welcome to my portfolio</title>
-</head>
-
-<body id="bg-img">
-  <header>
-    <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-    </div>
-
-    <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait"></div>
+  <body id="bg-img">
+    <header>
+      <div class="menu-btn">
+        <!--
+          the top right button that opens the menu is formed of three lines
+          that transform to become an x to close the menu.
+        -->
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
       </div>
-      <ul class="menu-nav">
-        <li class="nav-item current"><a href="index.html" class="nav-link"> Home </a></li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> About Me </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link"> Work </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"> Contact Details </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main id="home">
-    <h1 class="lg-heading">
-      Mark <span class="text-secondary">Powell</span>
-    </h1>
-    <h2 class="sm-heading">Web Developer, Programmer & Game Developer</h2>
-    <div class="icons">
-      <a href="#!"> <i class="fab fa-twitter fa-2x"> </i> </a>
-      <a href="#!"> <i class="fab fa-facebook fa-2x"> </i> </a>
-      <a href="#!"> <i class="fab fa-linkedin fa-2x"> </i> </a>
-      <a href="#!"> <i class="fab fa-github fa-2x"> </i> </a>
-    </div>
-  </main>
-  <script src="js/main.js"></script>
-</body>
 
+      <nav class="menu">
+        <!-- the menu and its contents -->
+        <div class="menu-branding"><div class="portrait"></div></div>
+        <!-- the portrait on the left -->
+        <ul class="menu-nav">
+          <!-- class containing the menu nav items -->
+          <li class="nav-item current">
+            <!-- when you are on the home page, this is the current nav item -->
+
+            <i class="fas fa-home fa-2x"></i>
+            <a href="index.html" class="nav-link"> Home </a>
+          </li>
+          <li class="nav-item">
+            <i class="fas fa-user fa-2x"></i>
+            <a href="about.html" class="nav-link"> About Me </a>
+          </li>
+          <li class="nav-item">
+            <i class="fas fa-project-diagram fa-2x"></i>
+            <a href="work.html" class="nav-link"> Work </a>
+          </li>
+          <li class="nav-item">
+            <i class="fas fa-address-card fa-2x"></i>
+            <a href="contact.html" class="nav-link"> Contact Details </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="home">
+      <h1 class="lg-heading">
+        Mark <span class="text-secondary">Powell</span>
+        <!-- my name -->
+      </h1>
+      <h2 class="sm-heading">Web Developer, Programmer & Game Developer</h2>
+      <!-- brief description -->
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/mark-powell-369086168/">
+          <!-- link to ym linkedin account -->
+          <i class="fab fa-linkedin fa-4x"> </i>
+          <!-- using fontawesome -->
+        </a>
+        <a href="https://github.com/MarkPowell1991">
+          <!-- link to my github -->
+          <i class="fab fa-github fa-4x"> </i>
+          <!-- using fontawesome -->
+        </a>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+    <!-- links to the js file used to identify when menu items are showing -->
+  </body>
 </html>
