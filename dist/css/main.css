@@ -24,31 +24,33 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
   .menu-branding, .menu-nav {
     display: flex;
     flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     float: left;
-    width: 50%;
-    height: 100vh;
+    width: 100%;
+    height: 50vh;
     overflow: hidden; }
   .menu-nav {
+    left: 50px;
     margin: 0;
     padding: 0;
     background: #373737;
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(-100%, 0, 0);
     transition: all 1s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #444;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(100%, 0, 0);
     transition: all 1s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -152,7 +154,7 @@
 body {
   background: #444;
   color: #fff;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.2; }
@@ -162,7 +164,7 @@ body {
     background-size: cover; }
     body#bg-img::after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
