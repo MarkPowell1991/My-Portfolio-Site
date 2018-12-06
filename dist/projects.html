@@ -25,18 +25,27 @@
       <nav class="menu">
         <div class="menu-branding"><div class="portrait"></div></div>
         <ul class="menu-nav">
-          <li class="nav-item ">
-            <a href="index.html" class="nav-link"> Home </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link"> About Me </a>
-          </li>
-          <li class="nav-item current">
-            <a href="work.html" class="nav-link"> Work </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link"> Contact Details </a>
-          </li>
+          <div class="menu-nav-aligner">
+            <li class="nav-item ">
+              <i class="fas fa-home fa-2x"></i>
+              <a href="index.html" class="nav-link"> Home </a>
+            </li>
+            <li class="nav-item">
+              <i class="fas fa-user fa-2x"></i>
+              <a href="about.html" class="nav-link"> About Me </a>
+            </li>
+            <li class="nav-item current">
+              <!--
+                when you are on the home page, this is the current nav item
+              -->
+              <i class="fas fa-project-diagram fa-2x"></i>
+              <a href="projects.html" class="nav-link"> projects </a>
+            </li>
+            <li class="nav-item">
+              <i class="fas fa-address-card fa-2x"></i>
+              <a href="contact.html" class="nav-link"> Contact Details </a>
+            </li>
+          </div>
         </ul>
       </nav>
     </header>
@@ -48,7 +57,7 @@
       <div class="projects">
         <div class="item">
           <a href="https://github.com/MarkPowell1991/Real-time_Roll">
-            <img src="" alt="Project" />
+            <img src="img/Real-Time_Roll_resized.png" alt="Project" />
           </a>
           <a href="#" class="btn-light"> <i class="fas fa-eye"></i> Project </a>
           <a href="#" class="btn-dark">
@@ -56,7 +65,9 @@
           </a>
         </div>
         <div class="item">
-          <a href="#!"> <img src="" alt="Project" /> </a>
+          <a href="https://github.com/MarkPowell1991/Intergrated-Project">
+            <img src="img/Ticket_Direct_Resized.png" alt="Project" />
+          </a>
           <a href="#" class="btn-light"> <i class="fas fa-eye"></i> Project </a>
           <a href="#" class="btn-dark">
             <i class="fab fa-github"></i> Github
