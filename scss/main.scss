@@ -20,7 +20,9 @@ body {
 //my name, description & the icon links
 h1,
 h2,
-h3 {
+h3,
+h4,
+h6 {
   margin: 0;
   font-weight: 400;
   &.lg-heading {
@@ -50,7 +52,7 @@ header {
 
 .text-secondary {
   //my surname
-  color: $secondary-color; //the 2nd them colour
+  color: $secondary-color; //the 2nd theme colour
 }
 
 main {
@@ -84,8 +86,25 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "job1 job2 job3";
+    "education1 education1 education1"
+    "job1 job2 job3"
+    "job4 job4 job4";
   grid-template-columns: repeat(3, 1fr);
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .text-subcat {
+    margin-top: rem;
+    font-size: 1.5rem;
+  }
+
+  .text-bullet {
+    margin-top: 1rem;
+  }
 
   .bio-image {
     grid-area: bioimage;
@@ -96,6 +115,11 @@ main {
 
   .bio {
     grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .education-1 {
+    grid-area: education1;
     font-size: 1.5rem;
   }
 
@@ -111,7 +135,17 @@ main {
     grid-area: job3;
   }
 
+  .job-4 {
+    grid-area: job4;
+  }
+
   .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+
+  .education {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
@@ -121,16 +155,45 @@ main {
 //projects
 .projects {
   display: grid;
+
   grid-gap: 0.7rem;
+  grid-template-areas:
+    "item-1 item-2 item-3"
+    "item-4 item-5 item-6";
   grid-template-columns: repeat(3, 1fr);
   img {
     width: 100%;
+    // width:
     border: 3px #fff solid;
     &:hover {
       opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+
+  .item-1 {
+    grid-area: item-1;
+  }
+
+  .item-2 {
+    grid-area: item-2;
+  }
+
+  .item-3 {
+    grid-area: item-3;
+  }
+
+  .item-4 {
+    grid-area: item-4;
+  }
+
+  .item-5 {
+    grid-area: item-5;
+  }
+
+  .item-6 {
+    grid-area: item-6;
   }
 }
 

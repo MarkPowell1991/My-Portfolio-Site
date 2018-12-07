@@ -2,9 +2,10 @@ $primary-color: #444;
 //$primary-color: rgba(56, 117, 197, 0.74);
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../img/Background.jpg);
+$home-image: url(../img/Home_Background2.jpeg);
 $portrait-imageLrg: url(../img/PortraitLrg.png);
 $portrait-imageSml: url(../img/PortraitSml.png);
+$portrait-image: url(../img/Portrait3.png);
 $background-opacity: 0.6;
 
 @mixin easeOut {
